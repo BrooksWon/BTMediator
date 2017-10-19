@@ -40,7 +40,7 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     NSString *urlString = [url query];
 
-#warning 远程调用时需要做url解码，因为url可能有中文和其他特殊符号
+#warning 远程调用时需要做url解码，因为url可能有中文和其他特殊符号 待优化
     urlString = [urlString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
     for (NSString *param in [urlString componentsSeparatedByString:@"&"]) {

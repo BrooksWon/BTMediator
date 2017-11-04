@@ -11,5 +11,7 @@
 @interface ViewControllerB : UIViewController
 
 @property (nonatomic,copy) NSString *bookName;
+@property (nonatomic,copy) NSString* (^aBlock)(NSString *, NSString *);
+
 
 @end

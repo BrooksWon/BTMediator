@@ -28,7 +28,12 @@
 - (IBAction)btnBClicked:(id)sender {
     
     // 调度时，给组件需要的参数即可
-    UIViewController *vc = [[BTMediator sharedInstance] BTMediator_nativeFetchViewControllerForBookComments:@"马列主义经典著作"];
+    //UIViewController *vc = [[BTMediator sharedInstance] BTMediator_nativeFetchViewControllerForBookComments:@"马列主义经典著作"];
+    UIViewController *vc = [[BTMediator sharedInstance] BTMediator_nativeFetchViewControllerForBookComments:@"马列主义经典著作" withBlock:^NSString *(NSString *status, NSString *code) {
+        NSLog(@"status=%@", status);
+        NSLog(@"code=%@", code);
+        return @"block 返回信息";
+    }];
     
     [self.navigationController pushViewController:vc animated:YES];
     

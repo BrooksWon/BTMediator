@@ -25,6 +25,7 @@
 {
     ViewControllerB * vcB = [[ViewControllerB alloc] init];
     vcB.bookName = params[@"bookName"];
+    vcB.aBlock= params[@"block"];
     
     return vcB;
 }

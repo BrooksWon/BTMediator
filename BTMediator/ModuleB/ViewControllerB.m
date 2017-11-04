@@ -25,7 +25,11 @@
     [super viewDidLoad];
 
     self.title = [NSString stringWithFormat:@"%@的书评", self.bookName];
-
+    
+    if (self.aBlock) {
+        NSString* resultString = self.aBlock(@"block 调用成功", @"200");
+        NSLog(@"resultString = %@", resultString);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

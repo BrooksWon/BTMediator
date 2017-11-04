@@ -15,7 +15,8 @@
 
 @implementation ViewControllerA
 - (IBAction)btnAction:(id)sender {
-    UIViewController *vc = [[BTMediator sharedInstance] BTMediator_nativeFetchViewControllerForBookComments:self.bookName];
+    //UIViewController *vc = [[BTMediator sharedInstance] BTMediator_nativeFetchViewControllerForBookComments:self.bookName];
+    UIViewController *vc = [[BTMediator sharedInstance] BTMediator_nativeFetchViewControllerForBookComments:self.bookName withBlock:nil];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

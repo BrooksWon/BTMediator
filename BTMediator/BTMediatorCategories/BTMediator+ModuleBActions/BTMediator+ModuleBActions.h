@@ -11,5 +11,8 @@
 
 @interface BTMediator (ModuleBActions)
 
-- (UIViewController *)BTMediator_nativeFetchViewControllerForBookComments:(NSString *)bookName;
+//- (UIViewController *)BTMediator_nativeFetchViewControllerForBookComments:(NSString *)bookName;
+
+- (UIViewController *)BTMediator_nativeFetchViewControllerForBookComments:(NSString *)bookName withBlock:(NSString* (^)(NSString *status, NSString *code))block;
+
 @end
